@@ -5,7 +5,7 @@ This project demonstrates loading of Progressive Web across various browser's in
 This example will cover:
 
 1. Installs PWA ( Only in  Android Device and Chrome Browser)
-2. Performs a simple test with a configured URL which supports PWA.
+2. Performs a simple test with a configured Web URL which supports PWA.
 
 
 ### Steps to run demo test
@@ -53,6 +53,15 @@ This example will cover:
 
     ![Scheme](images/IntelliJ_Run_Conf.gif)
 
+4. To Run tests, use src/main/java/testngs.xml file
+
+	Right click on the file and run from IntelliJ \ Eclipse
+	Or use the command line :
+
+	```
+	gradlew runTests
+	```
+
 5. To Run tests in parallel, use src/main/java/testng-parallel-class.xml file
 
 	Right click on the file and run from IntelliJ \ Eclipse
@@ -61,4 +70,5 @@ This example will cover:
 	```
 	gradlew runTestsParallel
 	```
-s
+
+Note : Default URL can be changed via configuration main/resources/seetest.propertiess
