@@ -9,6 +9,7 @@ import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import utils.ELEMENTS;
@@ -41,7 +42,7 @@ public class CrossBrowserDeviceTest extends TestBase {
     protected void installPWA() {
         if ("android".equals(os) && browser.equals("Chrome")) {
             installUrlPWAInChrome(url);
-            // Give 250ms  delay
+            // Give 1500ms  delay
             try {
                 Thread.sleep(1500);
             } catch (InterruptedException e) {
@@ -98,7 +99,7 @@ public class CrossBrowserDeviceTest extends TestBase {
                 swipeCount++;
             }
         }
-        LOGGER.info("Test Found - " + driver.findElement(xpathQueryBy).getText());
+        LOGGER.info("Text Found - " + driver.findElement(xpathQueryBy).getText());
     }
 
     @Override
@@ -154,11 +155,40 @@ public class CrossBrowserDeviceTest extends TestBase {
     protected void uninstallPWA() {
         if(isPWA) {
             LOGGER.info("Enter uninstallPWA()");
-            // Uninistall logic.
-            // For now not unistalling PWA.
+            WebElement element = null;
+            boolean found = false;
+            int screenCount = 0;
+            ((AndroidDriver) driver).pressKeyCode(AndroidKeyCode.HOME);
+            By trivagoShortCut = By.xpath(SHORTCUT_QUERY);
+            while (!found && screenCount < 10) {
+                if (driver.findElements(trivagoShortCut).size() > 0) {
+                    element = driver.findElement(trivagoShortCut);
+                    found = true;
+                } else {
+                    swipeLeft();
+                    screenCount++;
+                }
+            }
+            if (!found && screenCount >= 10) {
+                LOGGER.error("Shortcut not found ...");
+            }
+            swipeToRemove(element);
+
             LOGGER.info("PWA Unistalled.");
         }
+    }
 
+    /**
+     * Removes or Uninstalls the PWA.
+     * @param element
+     */
+    private void swipeToRemove(WebElement element) {
+        TouchAction myAction = new TouchAction((MobileDriver)driver);
+        Dimension size = driver.manage().window().getSize();
+        int endY = (int) (size.width * 0.05);
+        int coordX = (int) (size.width * 0.50);
+        LOGGER.info("X = " + size.width + "; Y" + size.height );
+        myAction.longPress(element, 3000).moveTo(coordX,endY).release().perform();
     }
 
     @Override
