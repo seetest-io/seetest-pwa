@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="PWAExample" duration-ms="70260" started-at="2018-12-11T07:59:45Z" finished-at="2018-12-11T08:00:55Z">
+    <groups>
+    </groups>
+    <test name="ChromeWebTest" duration-ms="10668" started-at="2018-12-11T07:59:45Z" finished-at="2018-12-11T07:59:56Z">
+      <class name="io.seetest.pwa.tests.CrossBrowserWebTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:io.seetest.pwa.tests.CrossBrowserWebTest@1936f0f5]" name="setUp" is-config="true" duration-ms="6215" started-at="2018-12-11T13:29:45Z" finished-at="2018-12-11T13:29:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@59e84876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCrossBrowserTest()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserWebTest@1936f0f5]" name="testCrossBrowserTest" duration-ms="3941" started-at="2018-12-11T13:29:51Z" finished-at="2018-12-11T13:29:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCrossBrowserTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserWebTest@1936f0f5]" name="tearDown" is-config="true" duration-ms="498" started-at="2018-12-11T13:29:55Z" finished-at="2018-12-11T13:29:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- io.seetest.pwa.tests.CrossBrowserWebTest -->
+    </test> <!-- ChromeWebTest -->
+    <test name="AndroidDeviceIETest" duration-ms="40040" started-at="2018-12-11T07:59:45Z" finished-at="2018-12-11T08:00:25Z">
+      <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@6fb554cc]" name="setUp" is-config="true" duration-ms="18366" started-at="2018-12-11T13:29:45Z" finished-at="2018-12-11T13:30:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[internet explorer]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@6276ae34]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCrossBrowserTest()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@6fb554cc]" name="testCrossBrowserTest" duration-ms="17304" started-at="2018-12-11T13:30:03Z" finished-at="2018-12-11T13:30:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCrossBrowserTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@6fb554cc]" name="tearDown" is-config="true" duration-ms="4362" started-at="2018-12-11T13:30:21Z" finished-at="2018-12-11T13:30:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- io.seetest.pwa.tests.CrossBrowserDeviceTest -->
+    </test> <!-- AndroidDeviceIETest -->
+    <test name="AndroidDeviceFirefoxTest" duration-ms="49393" started-at="2018-12-11T07:59:45Z" finished-at="2018-12-11T08:00:34Z">
+      <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@2ef9b8bc]" name="setUp" is-config="true" duration-ms="22557" started-at="2018-12-11T13:29:45Z" finished-at="2018-12-11T13:30:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@7946e1f4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCrossBrowserTest()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@2ef9b8bc]" name="testCrossBrowserTest" duration-ms="22948" started-at="2018-12-11T13:30:07Z" finished-at="2018-12-11T13:30:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCrossBrowserTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@2ef9b8bc]" name="tearDown" is-config="true" duration-ms="3880" started-at="2018-12-11T13:30:30Z" finished-at="2018-12-11T13:30:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- io.seetest.pwa.tests.CrossBrowserDeviceTest -->
+    </test> <!-- AndroidDeviceFirefoxTest -->
+    <test name="IOSSafariDeviceTest" duration-ms="64036" started-at="2018-12-11T07:59:45Z" finished-at="2018-12-11T08:00:49Z">
+      <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@3567135c]" name="setUp" is-config="true" duration-ms="42497" started-at="2018-12-11T13:29:45Z" finished-at="2018-12-11T13:30:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ios]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@3c09711b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCrossBrowserTest()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@3567135c]" name="testCrossBrowserTest" duration-ms="15594" started-at="2018-12-11T13:30:27Z" finished-at="2018-12-11T13:30:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCrossBrowserTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@3567135c]" name="tearDown" is-config="true" duration-ms="5934" started-at="2018-12-11T13:30:43Z" finished-at="2018-12-11T13:30:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- io.seetest.pwa.tests.CrossBrowserDeviceTest -->
+    </test> <!-- IOSSafariDeviceTest -->
+    <test name="PWAAndroidDeviceChromeTest" duration-ms="70260" started-at="2018-12-11T07:59:45Z" finished-at="2018-12-11T08:00:55Z">
+      <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@3fb6a447]" name="setUp" is-config="true" duration-ms="46381" started-at="2018-12-11T13:29:45Z" finished-at="2018-12-11T13:30:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[04e196bf7d25]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@5cc7c2a6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCrossBrowserTest()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@3fb6a447]" name="testCrossBrowserTest" duration-ms="19303" started-at="2018-12-11T13:30:31Z" finished-at="2018-12-11T13:30:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCrossBrowserTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:io.seetest.pwa.tests.CrossBrowserDeviceTest@3fb6a447]" name="tearDown" is-config="true" duration-ms="4567" started-at="2018-12-11T13:30:51Z" finished-at="2018-12-11T13:30:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- io.seetest.pwa.tests.CrossBrowserDeviceTest -->
+    </test> <!-- PWAAndroidDeviceChromeTest -->
+  </suite> <!-- PWAExample -->
+</testng-results>
