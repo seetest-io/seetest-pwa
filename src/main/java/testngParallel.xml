@@ -9,7 +9,7 @@
          <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest"/>
       </classes>
    </test>
-   <test name="AndroidDeviceFirefoxTest">
+   <!--<test name="AndroidDeviceFirefoxTest">
       <parameter name = "os" value="android"/>
       <parameter name = "browser" value="firefox"/>
       <parameter name = "deviceId" value=""/>
@@ -32,7 +32,7 @@
       <classes>
          <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest"/>
       </classes>
-   </test>
+   </test>-->
    <!--<test name="IOSChromeDeviceTest">
       <parameter name = "os" value="ios"/>
       <parameter name = "browser" value="Chrome"/>
@@ -42,12 +42,12 @@
       </classes>
    </test>-->
 
-   <test name="ChromeWebTest">
+   <!--<test name="ChromeWebTest">
       <parameter name = "browser" value="chrome"/>
       <parameter name = "os" value="windows"/>
       <classes>
          <class name="io.seetest.pwa.tests.CrossBrowserWebTest"/>
       </classes>
-   </test>
+   </test>-->
 
 </suite>

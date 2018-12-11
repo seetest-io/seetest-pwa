@@ -163,7 +163,7 @@ public class CrossBrowserDeviceTest extends TestBase {
 
     @Override
     protected boolean checkPWAUrl() {
-        if ("android".equals(os) && browser.equals("Chrome")) {
+        if (!("android".equals(os) && browser.equals("Chrome"))) {
             return false;
         }
         LOGGER.info("Checking if the URL is PWA");
