@@ -19,7 +19,7 @@ public class SeeTestProperties {
 
     static {
         try {
-            SEETEST_IO_APPIUM_URL = new URL("https://sales.experitest.com/wd/hub");
+            SEETEST_IO_APPIUM_URL = new URL("https://cloud.seetest.io:443/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

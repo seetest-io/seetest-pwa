@@ -84,7 +84,6 @@ public class CrossBrowserDeviceTest extends TestBase {
         WebDriverWait wait = new WebDriverWait(driver, 2);
         String xPathQuery = properties.getProperty(SeeTestProperties.XPATH_QUERY);
         LOGGER.info("Looking for XPATH - " + xPathQuery);
-        //By xpathQueryBy = By.xpath("//*[contains(text(),'Find your ideal')]");
 
         By xpathQueryBy = By.xpath(xPathQuery);
         boolean found = false;
@@ -94,12 +93,11 @@ public class CrossBrowserDeviceTest extends TestBase {
                 LOGGER.info("Found Element for XPATH - " + xPathQuery);
                 found = true;
             } else {
-                LOGGER.info("Test Found - " + driver.findElement(xpathQueryBy).getText());
+                LOGGER.info("Text Found - " + driver.findElement(xpathQueryBy).getText());
                 swipeTop();
                 swipeCount++;
             }
         }
-        //wait.until(ExpectedConditions.visibilityOfElementLocated(xpathQuery));
         LOGGER.info("Test Found - " + driver.findElement(xpathQueryBy).getText());
     }
 
@@ -115,6 +113,7 @@ public class CrossBrowserDeviceTest extends TestBase {
                 driver.findElement(trivagoShortCut).click();
                 found = true;
             } else {
+                // If not found swipe to next ..
                 swipeLeft();
                 screenCount++;
             }
@@ -122,10 +121,12 @@ public class CrossBrowserDeviceTest extends TestBase {
         if (!found && screenCount >= 10) {
             LOGGER.error("Shortcut not found ...");
         }
-        LOGGER.info("Fininsh - Setting up for PWA");
+        LOGGER.info("Finish - Setting up for PWA");
     }
 
-
+    /**
+     * Swipe to next screen of device home.
+     */
     private void swipeLeft() {
         TouchAction myAction = new TouchAction((MobileDriver)driver);
         Dimension size = driver.manage().window().getSize();
@@ -136,6 +137,9 @@ public class CrossBrowserDeviceTest extends TestBase {
         myAction.press(startX,coordY).waitAction(3000).moveTo(endX,coordY).release().perform();
     }
 
+    /**
+     * Swipe to Top of the Web Page.
+     */
     private void swipeTop() {
         TouchAction myAction = new TouchAction((MobileDriver)driver);
         Dimension size = driver.manage().window().getSize();
@@ -159,6 +163,9 @@ public class CrossBrowserDeviceTest extends TestBase {
 
     @Override
     protected boolean checkPWAUrl() {
+        if ("android".equals(os) && browser.equals("Chrome")) {
+            return false;
+        }
         LOGGER.info("Checking if the URL is PWA");
         boolean checkPWAUrl = false;
         if (checkPWA) {
@@ -166,7 +173,9 @@ public class CrossBrowserDeviceTest extends TestBase {
                 checkPWAUrl = isPWA;
             } else {
                 // We always return true now.
+                // Add logic for detection of PWA.
                 checkPWAUrl = true;
+                isPWA = checkPWAUrl;
             }
         } else {
             checkPWAUrl = false;
