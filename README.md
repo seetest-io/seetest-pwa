@@ -71,9 +71,9 @@ This example will cover:
 	gradlew runTestsParallel
 	```
 
-Note : Default URL can be changed via configuration main/resources/seetest.properties
-       To change run test on a specific device, Open the main/java/testng.xml or testngParallel.xml and modify specify device as follows,
-
-        <parameter name = "deviceId" value="d0429a1b7d24"/> were "d0429a1b7d24" is device id.
+Note :
+       - Default URL can be changed via configuration main/resources/seetest.properties
+       - To change run test on a specific device, Open the main/java/testng.xml or testngParallel.xml and modify specify device as follows,
+            <parameter name = "deviceId" value="d0429a1b7d24"/> where "d0429a1b7d24" is device id.
 
 
