@@ -18,8 +18,10 @@ import utils.SeeTestProperties;
 
 import java.util.Properties;
 
+import static utils.SeeTestProperties.SEETEST_REPORT_TYPE;
+
 /**
- * Base class for all Eribank tests.
+ * Base class for all tests.
  */
 public abstract class TestBase {
 
@@ -42,7 +44,7 @@ public abstract class TestBase {
      */
     @Parameters({"os", "browser" , "deviceId"})
     @BeforeClass
-    public void setUp(@Optional("android") String os, @Optional ("Chrome") String browser,
+    public void setUp(@Optional("android") String os, @Optional ("chrome") String browser,
                       @Optional("") String deviceId, ITestContext testContext) {
 
         LOGGER = new Log4jLoggerFactory().getLogger(testContext.getCurrentXmlTest().getName());
@@ -63,6 +65,7 @@ public abstract class TestBase {
         }
 
         dc.setCapability(SeeTestCapabilityType.ACCESS_KEY, accessKey);
+        dc.setCapability("testType", properties.getProperty(SEETEST_REPORT_TYPE));
 
         this.initDefaultDesiredCapabilities();
         dc.setCapability("testName",

@@ -40,6 +40,11 @@ public class CrossBrowserWebTest extends TestBase {
         String xPathQuery = properties.getProperty(SeeTestProperties.XPATH_QUERY);
         By xpathQuery = By.xpath(xPathQuery);
         LOGGER.info("Test Found - " + driver.findElement(xpathQuery).getText());
+        try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

@@ -16,10 +16,11 @@ public class SeeTestProperties {
     public static URL SEETEST_IO_APPIUM_URL;
     public static final String WEB_URL = "web.url" ;
     public static final String XPATH_QUERY = "xpath.query";
+    public static final String SEETEST_REPORT_TYPE = "seetest.testtype";
 
     static {
         try {
-            SEETEST_IO_APPIUM_URL = new URL("https://cloud.seetest.io:443/wd/hub");
+            SEETEST_IO_APPIUM_URL = new URL("https://sales.experitest.com/wd/hub");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

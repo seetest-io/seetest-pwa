@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="PWAExample" configfailurepolicy="continue"  parallel="tests" verbose="2">
+<suite name="PWAExample" configfailurepolicy="continue"  parallel="tests" thread-count="9" verbose="2">
    <test name="PWAAndroidDeviceChromeTest">
       <parameter name = "os" value="android"/>
-      <parameter name = "browser" value="Chrome"/>
-      <parameter name = "deviceId" value="04e196bf7d25"/>
-      <classes>
-         <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest"/>
-      </classes>
-   </test>
-   <test name="AndroidDeviceFirefoxTest">
-      <parameter name = "os" value="android"/>
-      <parameter name = "browser" value="firefox"/>
-      <parameter name = "deviceId" value=""/>
-      <classes>
-         <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest"/>
-      </classes>
-   </test>
-   <test name="AndroidDeviceIETest">
-      <parameter name = "os" value="android"/>
-      <parameter name = "browser" value="internet explorer"/>
-      <parameter name = "deviceId" value=""/>
+      <parameter name = "browser" value="chrome"/>
+      <!--<parameter name = "deviceId" value="d0429a1b7d24"/>-->
+       <parameter name = "deviceId" value=""/>
       <classes>
          <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest"/>
       </classes>
@@ -33,18 +18,52 @@
          <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest"/>
       </classes>
    </test>
-   <!--<test name="IOSChromeDeviceTest">
+   <test name="IOSSafariTabletTest">
       <parameter name = "os" value="ios"/>
-      <parameter name = "browser" value="Chrome"/>
+      <parameter name = "browser" value="safari"/>
       <parameter name = "deviceId" value=""/>
       <classes>
          <class name="io.seetest.pwa.tests.CrossBrowserDeviceTest"/>
       </classes>
-   </test>-->
-
+   </test>
    <test name="ChromeWebTest">
       <parameter name = "browser" value="chrome"/>
       <parameter name = "os" value="windows"/>
+      <classes>
+         <class name="io.seetest.pwa.tests.CrossBrowserWebTest"/>
+      </classes>
+   </test>
+   <test name="MACSafariWebTest">
+      <parameter name = "browser" value="safari"/>
+      <parameter name = "os" value="Mac"/>
+      <classes>
+         <class name="io.seetest.pwa.tests.CrossBrowserWebTest"/>
+      </classes>
+   </test>
+   <test name="EdgeWinWebTest">
+      <parameter name = "browser" value="internet explorer"/>
+      <parameter name = "os" value="windows"/>
+      <classes>
+         <class name="io.seetest.pwa.tests.CrossBrowserWebTest"/>
+      </classes>
+   </test>
+   <test name="ChromeMacWebTest">
+      <parameter name = "browser" value="chrome"/>
+      <parameter name = "os" value="Mac"/>
+      <classes>
+         <class name="io.seetest.pwa.tests.CrossBrowserWebTest"/>
+      </classes>
+   </test>
+   <test name="FirefoxWinWebTest">
+      <parameter name = "browser" value="firefox"/>
+      <parameter name = "os" value="windows"/>
+      <classes>
+         <class name="io.seetest.pwa.tests.CrossBrowserWebTest"/>
+      </classes>
+   </test>
+   <test name="FirefoxMacWebTest">
+      <parameter name = "browser" value="firefox"/>
+      <parameter name = "os" value="mac"/>
       <classes>
          <class name="io.seetest.pwa.tests.CrossBrowserWebTest"/>
       </classes>
